@@ -27,6 +27,7 @@ public class SpringBootMybatisApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootMybatisApplication.class, args);
 	}
+	
 
 }
 
