@@ -4,10 +4,10 @@ import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.python.core.PyFunction;
-import org.python.core.PyInteger;
-import org.python.core.PyObject;
-import org.python.util.PythonInterpreter;
+//import org.python.core.PyFunction;
+//import org.python.core.PyInteger;
+//import org.python.core.PyObject;
+//import org.python.util.PythonInterpreter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,65 +31,65 @@ public class ProductController {
 	@Autowired
 	private OCRService ocrService;
 	
-	//  테스트
-	private static PythonInterpreter intPre;
-	
-	@RequestMapping("/pyTest")
-	public String pythonTest() {
-	    System.out.println("파이썬 테스트"); 
-	    
-	    System.setProperty("python.import.site", "false");
-	    intPre = new PythonInterpreter();
-	    intPre.execfile("D:/springWorkspace/test.py");
-	    intPre.exec("print('python running')");
-	    
-	    PyFunction pyFuntion = (PyFunction) intPre.get("testFunc", PyFunction.class);
-	    int a = 10, b = 20;
-	    PyObject pyobj = pyFuntion.__call__(new PyInteger(a), new PyInteger(b));
-	    System.out.println(pyobj.toString());
-	
-	    return pyobj.toString();
-	}
-	
-//	@RequestMapping("/fishTest")
-//	public String pythonFishTest() {
-//	    System.out.println("fish 테스트"); 
-//	    
-//	    String fileName = "./image/test/test_kwang_09.jpg";
+//	//  테스트
+//	private static PythonInterpreter intPre;
+//	
+//	@RequestMapping("/pyTest")
+//	public String pythonTest() {
+//	    System.out.println("파이썬 테스트"); 
 //	    
 //	    System.setProperty("python.import.site", "false");
 //	    intPre = new PythonInterpreter();
-//	    intPre.execfile("D:/springWorkspace/fishtest.py");
+//	    intPre.execfile("D:/springWorkspace/test.py");
 //	    intPre.exec("print('python running')");
 //	    
-//	    PyFunction pyFuntion = (PyFunction) intPre.get("fishClassify", PyFunction.class);
-//	   int a = 1, b= 2;
+//	    PyFunction pyFuntion = (PyFunction) intPre.get("testFunc", PyFunction.class);
+//	    int a = 10, b = 20;
 //	    PyObject pyobj = pyFuntion.__call__(new PyInteger(a), new PyInteger(b));
 //	    System.out.println(pyobj.toString());
 //	
 //	    return pyobj.toString();
 //	}
-	
-	@RequestMapping("/fishTest")
-	public void pythonFishTest() {
-	    System.out.println("fish 테스트"); 
-	    
-	    String fileName = "./image/test/test_kwang_09.jpg";
-	    
-	    StringWriter out = new StringWriter();	  
-	    
-	    //System.out.println("1 : " + System.getProperties()) ;
-	    
-	    System.setProperty("python.import.site", "false");
-	    intPre = new PythonInterpreter();    	  
-	    
-	    intPre.setOut(out);
-	    
-	    intPre.set("fileName", fileName);
-	    intPre.execfile("D:/springWorkspace/fishtest.py");
-	    System.out.println(out.toString());	
-	    
-	}
+//	
+////	@RequestMapping("/fishTest")
+////	public String pythonFishTest() {
+////	    System.out.println("fish 테스트"); 
+////	    
+////	    String fileName = "./image/test/test_kwang_09.jpg";
+////	    
+////	    System.setProperty("python.import.site", "false");
+////	    intPre = new PythonInterpreter();
+////	    intPre.execfile("D:/springWorkspace/fishtest.py");
+////	    intPre.exec("print('python running')");
+////	    
+////	    PyFunction pyFuntion = (PyFunction) intPre.get("fishClassify", PyFunction.class);
+////	   int a = 1, b= 2;
+////	    PyObject pyobj = pyFuntion.__call__(new PyInteger(a), new PyInteger(b));
+////	    System.out.println(pyobj.toString());
+////	
+////	    return pyobj.toString();
+////	}
+//	
+//	@RequestMapping("/fishTest")
+//	public void pythonFishTest() {
+//	    System.out.println("fish 테스트"); 
+//	    
+//	    String fileName = "./image/test/test_kwang_09.jpg";
+//	    
+//	    StringWriter out = new StringWriter();	  
+//	    
+//	    //System.out.println("1 : " + System.getProperties()) ;
+//	    
+//	    System.setProperty("python.import.site", "false");
+//	    intPre = new PythonInterpreter();    	  
+//	    
+//	    intPre.setOut(out);
+//	    
+//	    intPre.set("fileName", fileName);
+//	    intPre.execfile("D:/springWorkspace/fishtest.py");
+//	    System.out.println(out.toString());	
+//	    
+//	}
     
 	
 	// 시작 시 index 페이지 열기
