@@ -92,11 +92,7 @@
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
 		</dependency>
-		<dependency>
-		    <groupId>org.apache.tomcat.embed</groupId>
-		    <artifactId>tomcat-embed-jasper</artifactId>
-		    <scope>provided</scope>
-		</dependency>
+
 		
 		<!-- spring boot auto restart(설정, 클래스가 바뀌면 auto restart) -->
         <!-- 스프링 레거시 프로젝트에서는 자바코드가 바뀌면 자동으로 서버가 다시시작되는데 부트에서는
