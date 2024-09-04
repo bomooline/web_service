@@ -36,7 +36,7 @@ public class ProductRestController {
 	public String ocr(@RequestParam("uploadFile") MultipartFile file){	
 		String result = "";
 		try {			
-			 //String uploadPath = "C:/springWorkspace/upload/"; // 로컬 경로
+			//String uploadPath = "C:/springWorkspace/upload/"; // 로컬 경로
 			String uploadPath = "/usr/local/project/upload/"; // 서버 경로
 			
 			String originalFileName = file.getOriginalFilename();
