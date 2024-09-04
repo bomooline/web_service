@@ -11,23 +11,7 @@ import org.springframework.context.annotation.PropertySources;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.WebApplicationContext;
 
-@SpringBootApplication
-@ComponentScan(basePackages = {"com.spring_boot_mybatis.project"})
-@MapperScan(basePackages = {"com.spring_boot_mybatis.project"})
-////@MapperScan(basePackageClasses=IProductDAO.class)
-//
-//// DB 연결정보 : 프로퍼티 사용
-// 로컬 경로
-//@PropertySources({
-//	@PropertySource(value="file:d:/springWorkspace/configure.properties", ignoreResourceNotFound=true)
-//})
-//
-//// 서버 경로
-////@PropertySources({
-////	@PropertySource(value="file:/usr/local/project/properties/configure.properties", ignoreResourceNotFound=true)
-////})
-
-public class ServletInitializer extends SpringBootServletInitializer {
+public class ServletInitializer extends SpringBootServletInitializer implements WebApplicationInitializer{
 //	public static void main(String[] args) {
 //		SpringApplication.run(SpringBootMybatisApplication.class, args);
 //	}
