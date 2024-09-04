@@ -73,7 +73,7 @@
 		</dependency>		
 		
 		<!-- JSP 의존성 설정 -->
-		<!-- <dependency>
+		<dependency>
 			<groupId>jakarta.servlet</groupId>
 			<artifactId>jakarta.servlet-api</artifactId>
 		</dependency>
@@ -86,12 +86,12 @@
 		<dependency>
 			<groupId>org.glassfish.web</groupId>
 			<artifactId>jakarta.servlet.jsp.jstl</artifactId>
-		</dependency> -->
-		
+		</dependency>
+<!-- 		
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
-		</dependency>
+		</dependency> -->
 
 		
 		<!-- spring boot auto restart(설정, 클래스가 바뀌면 auto restart) -->
